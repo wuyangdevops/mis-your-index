@@ -1,0 +1,22 @@
+class DefaultConfig(object):
+    """
+    Flask默认配置
+    """
+    ERROR_404_HELP = False
+    
+    # 日志
+    LOGGING_LEVEL = 'INFO'
+    LOGGING_FILE_DIR = './logs'
+    LOGGING_FILE_MAX_BYTES = 300 * 1024 * 1024
+    LOGGING_FILE_BACKUP = 10
+
+    # flask-sqlalchemy使用的参数
+    SQLALCHEMY_DATABASE_URI = 'mysql://$USER:$PASSWORD@$HOST/$DB'  # 数据库
+
+    SQLALCHEMY_TRACK_MODIFICATIONS = False  # 追踪数据的修改信号
+    SQLALCHEMY_ECHO = True
+
+    # JWT
+    JWT_SECRET = ''
+    JWT_EXPIRY_HOURS = 2
+
