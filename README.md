@@ -19,7 +19,7 @@ npm run build
 # 2. 配置Nginx服务器（参考nginx.conf）
 ```
 ### 后端
-- python(3.7+)
+- python(3.7+)/MySQL(5.6+)
 ```shell
 cd ./back-end
 # 配置环境 (按数据库信息修改default.py中SQLALCHEMY_DATABASE_URI)
@@ -43,4 +43,39 @@ http://124.221.225.43
 ```plain
 user: admin
 password: 1234
+```
+## 页面概览
+- /home
+![Image text](https://github.com/wuyangdevops/mis-your-index/blob/main/images/home.png)
+```plain
+1. 展示统计信息
+```
+
+- /category
+![Image text](https://github.com/wuyangdevops/mis-your-index/blob/main/images/category.png)
+```plain
+1. 展示品类信息（二级品类结构）
+2. 新增、编辑品类信息
+```
+
+- /product
+![Image text](https://github.com/wuyangdevops/mis-your-index/blob/main/images/product.png)
+```plain
+1. 展示商品信息
+2. 新增、编辑商品信息（包括上下架）
+3. 按照名称、描述搜索商品
+```
+
+- /user
+![Image text](https://github.com/wuyangdevops/mis-your-index/blob/main/images/user.png)
+```plain
+1. 展示用户信息
+2. 新增、编辑用户
+```
+
+- /role
+![Image text](https://github.com/wuyangdevops/mis-your-index/blob/main/images/role.png)
+```plain
+1. 展示角色信息
+2. 编辑角色权限
 ```
