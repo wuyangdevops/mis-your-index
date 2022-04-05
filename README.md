@@ -5,7 +5,8 @@
 (2) 后端基于框架Flask，对应目录./back-end
 ```
 ## 使用方法
-- 前端
+### 前端
+- npm(8.0+)/react(18.0)
 ```shell
 cd ./front-end
 # 安装依赖
@@ -17,7 +18,8 @@ npm start
 npm run build
 # 2. 配置Nginx服务器（参考nginx.conf）
 ```
-- 后端
+### 后端
+- python(3.7+)
 ```shell
 cd ./back-end
 # 配置环境 (按数据库信息修改default.py中SQLALCHEMY_DATABASE_URI)
@@ -28,7 +30,7 @@ pip install -r requirement.txt
 export FLASK_APP=mis_backend.main
 flask run
 # 生产模式 (Linux)
-gunicorn -w 2 -b 127.0.0.1 5000
+gunicorn -w 2 -b 127.0.0.1 5000 mis_backend.main:app
 ```
 
 - 使用咨询和建议可联系
@@ -37,9 +39,8 @@ email: wuyangwebdeveloper@163.com
 ```
 
 ## demo地址
-```plain
 http://124.221.225.43
-
+```plain
 user: admin
 password: 1234
 ```
