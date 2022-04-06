@@ -83,6 +83,10 @@ def update_user_view():
 def delete_user_view():
     body: dict = request.json
     _id: int = body.get("userId")
+    user = Users.query.options(load_only(
+        Users.username)).filter_by(is_deleted=0, id=_id).first()
+    if user.username == 'admin':
+        return jsonify({"status": 1, "msg": "you cannot delete user admin"})
     try:
         Users.query.filter_by(id=_id).update({'is_deleted': gen_timestamp()})
         db.session.commit()
